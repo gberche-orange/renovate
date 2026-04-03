@@ -830,8 +830,9 @@ After we changed the [`baseBranchPatterns`](#basebranchpatterns) feature, the Re
 <!-- prettier-ignore -->
 !!! warning
     The `configMigration` feature writes plain JSON for `.json` files, and JSON5 for `.json5` files.
+    Most jsonc comments in `.json` files should be preserved, but may require to delete old configuration migration PR.
     Renovate may downgrade JSON5 content to plain JSON.
-    When downgrading JSON5 to JSON Renovate may also remove the JSON5 comments.
+    When downgrading JSON5 to JSON Renovate may also remove some of part of the JSON5 comments.
     This can happen because Renovate wrongly converts JSON5 to JSON, thus removing the comments.
 
 For more details, read the [config migration documentation](./config-migration.md).
